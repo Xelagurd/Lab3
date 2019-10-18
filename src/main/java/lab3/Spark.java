@@ -44,6 +44,7 @@ public class Spark {
         Map<Integer, String> toPair = nameFile.mapToPair(
                 p -> {
                     String[] splitAp = p.split(",");
+                    return new Tuple2<>(Integer.parseInt(splitAp[0]), splitAp[1]);
                 }
         ).collectAsMap();
     }
