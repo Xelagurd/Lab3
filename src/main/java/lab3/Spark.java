@@ -20,5 +20,13 @@ public class Spark {
         });
 
         /*д. В качестве ключа для пары аэропортов используем класс Tuple2 */
+        JavaPairRDD<Tuple2, AirportPair> combineData = flData.combineByKey(
+                a -> new AirportPair(
+                        1,
+                        a.getCanceled(),
+                        a.getDelayed(),
+                        a.getDelay()
+                ),
+        );
     }
 }
