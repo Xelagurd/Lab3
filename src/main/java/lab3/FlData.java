@@ -15,9 +15,13 @@ public class FlData implements Serializable {
     private static final int DEPART_INDEX = 11;
     private static final int CANCELED_INDEX = 19;
     private static final int DELAY_INDEX = 17;
-    
+
     public FlData(String flData) throws NumberFormatException {
         String[] splitData = flData.split(",");
+        this.departApId = Integer.parseInt(splitData[DEPART_INDEX]);
+        this.arrivalApId = Integer.parseInt(splitData[ARRIVAL_INDEX]);
+        canceled = splitData[CANCELED_INDEX].charAt(0) == '1';
+
     }
 
     public int getDepartApId() {
