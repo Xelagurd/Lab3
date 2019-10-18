@@ -31,4 +31,12 @@ public class AirportPair implements Serializable {
     public double getMaxDelay() {
         return maxDelay;
     }
+
+    public double getDelPer() {
+        return 100.0 * ((double)this.delayedFl / this.allFl);
+    }
+
+    public double getCancPer() {
+        return 100.0 * ((double)this.canceledFl / this.allFl);
+    }
 }
