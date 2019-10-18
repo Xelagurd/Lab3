@@ -55,6 +55,8 @@ public class Spark {
         /*ж. в методе map преобразуем данные из итогового RDD для вывода, обогащая его именами аэропортов*/
         System.out.println(combineData.map(s -> {
             return broadcastAp.getValue().get((Integer) s._1._1) + "\" " +
+                    broadcastAp.getValue().get((Integer) s._1._2) + "\" " +
+                    s._2.toString() + "\n";
         }).collect());
     }
 }
