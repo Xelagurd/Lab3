@@ -1,4 +1,7 @@
 package lab3;
 
-public class FlData {
+import java.io.Serializable;
+
+public class FlData implements Serializable {
+
 }
