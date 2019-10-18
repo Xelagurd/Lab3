@@ -6,6 +6,8 @@ import org.apache.spark.api.java.JavaRDD;
 import org.apache.spark.api.java.JavaSparkContext;
 import scala.Tuple2;
 
+import java.util.Map;
+
 public class Spark {
     public static void main(String[] args) {
         /*а. Инициализируем Spark */
@@ -35,6 +37,12 @@ public class Spark {
                 AirportPair::add
         );
 
+        JavaRDD<String> nameFile = sc.textFile("L_AIRPORT_ID.csv");
 
+        /*е. для связывания с таблицей аэропортов — предварительно выкачиваем список
+        аэропортов с помощью метода collectAsMap */
+        Map<Integer, String> toPair = nameFile.mapToPair(
+                
+        ).collectAsMap();
     }
 }
