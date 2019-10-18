@@ -39,4 +39,13 @@ public class AirportPair implements Serializable {
     public double getCancPer() {
         return 100.0 * ((double)this.canceledFl / this.allFl);
     }
+
+    public static AirportPair add(AirportPair a, AirportPair b) {
+        return new AirportPair(
+        );
+    }
+
+    public AirportPair addFl(int canceledFl, int delayedFl, double maxDelay) {
+
+    }
 }
