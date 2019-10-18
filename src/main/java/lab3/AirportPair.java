@@ -33,15 +33,19 @@ public class AirportPair implements Serializable {
     }
 
     public double getDelPer() {
-        return 100.0 * ((double)this.delayedFl / this.allFl);
+        return 100.0 * ((double) this.delayedFl / this.allFl);
     }
 
     public double getCancPer() {
-        return 100.0 * ((double)this.canceledFl / this.allFl);
+        return 100.0 * ((double) this.canceledFl / this.allFl);
     }
 
     public static AirportPair add(AirportPair a, AirportPair b) {
         return new AirportPair(
+                a.allFl + b.allFl,
+                a.canceledFl + b.canceledFl,
+                a.delayedFl + b.delayedFl,
+                Math.max(a.getMaxDelay(), b.getMaxDelay())
         );
     }
 
