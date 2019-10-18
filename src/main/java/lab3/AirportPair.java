@@ -50,6 +50,11 @@ public class AirportPair implements Serializable {
     }
 
     public AirportPair addFl(int canceledFl, int delayedFl, double maxDelay) {
-
+        return new AirportPair(
+                this.allFl + 1,
+                this.canceledFl + canceledFl,
+                this.delayedFl + delayedFl,
+                Math.max(this.maxDelay, maxDelay)
+        );
     }
 }
