@@ -52,6 +52,7 @@ public class Spark {
         /*ё. создаем в основном методе main переменную broadcast */
         final Broadcast<Map<Integer, String>> broadcastAp = sc.broadcast(toPair);
 
-        
+        /*ж. в методе map преобразуем данные из итогового RDD для вывода, обогащая его именами аэропортов*/
+        System.out.println(combineData.map(s -> {}).collect());
     }
 }
