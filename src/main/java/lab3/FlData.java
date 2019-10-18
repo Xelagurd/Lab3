@@ -22,6 +22,14 @@ public class FlData implements Serializable {
         this.arrivalApId = Integer.parseInt(splitData[ARRIVAL_INDEX]);
         canceled = splitData[CANCELED_INDEX].charAt(0) == '1';
 
+        if (!canceled & splitData[DELAY_INDEX].length() != 0) {
+            delay = Double.parseDouble(splitData[DELAY_INDEX]);
+        } else {
+            delay = 0;
+        }
+        
+        if (delay > 0)
+            delayed = true;
     }
 
     public int getDepartApId() {
