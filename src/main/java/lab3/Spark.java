@@ -42,7 +42,9 @@ public class Spark {
         /*е. для связывания с таблицей аэропортов — предварительно выкачиваем список
         аэропортов с помощью метода collectAsMap */
         Map<Integer, String> toPair = nameFile.mapToPair(
-                
+                p -> {
+                    String[] splitAp = p.split(",");
+                }
         ).collectAsMap();
     }
 }
