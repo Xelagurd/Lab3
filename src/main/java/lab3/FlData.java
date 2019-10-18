@@ -10,12 +10,24 @@ public class FlData implements Serializable {
     private boolean delayed;
     private boolean canceled;
     private double delay;
-    
+
     public int getDepartApId() {
         return departApId;
     }
 
     public int getArrivalApId() {
         return arrivalApId;
+    }
+
+    public double getDelay() {
+        return delay;
+    }
+
+    public int getCanceled() {
+        return canceled ? 1 : 0;
+    }
+
+    public int getDelayed() {
+        return delayed ? 1 : 0;
     }
 }
