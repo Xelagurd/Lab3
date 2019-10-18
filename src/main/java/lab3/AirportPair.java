@@ -57,4 +57,8 @@ public class AirportPair implements Serializable {
                 Math.max(this.maxDelay, maxDelay)
         );
     }
+
+    public String toString() {
+        return "Max delay: " + Double.toString(this.maxDelay) +
+    }
 }
