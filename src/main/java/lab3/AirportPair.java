@@ -1,4 +1,7 @@
 package lab3;
 
-public class AirportPair {
+import java.io.Serializable;
+
+public class AirportPair implements Serializable {
+
 }
