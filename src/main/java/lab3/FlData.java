@@ -27,7 +27,7 @@ public class FlData implements Serializable {
         } else {
             delay = 0;
         }
-        
+
         if (delay > 0)
             delayed = true;
     }
@@ -42,6 +42,14 @@ public class FlData implements Serializable {
 
     public double getDelay() {
         return delay;
+    }
+
+    public boolean isDelayed() {
+        return delayed;
+    }
+
+    public boolean isCancelled() {
+        return canceled;
     }
 
     public int getCanceled() {
