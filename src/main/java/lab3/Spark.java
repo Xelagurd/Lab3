@@ -15,7 +15,10 @@ public class Spark {
         JavaRDD<String> flFile = sc.textFile("664600583_T_ONTIME_sample.csv");
         /*в. Преобразуем RDD в RDD пару ключ значение */
         JavaPairRDD<Tuple2, FlData> flData = flFile.mapToPair(s -> {
-
+            FlData fd = new FlData(s);
+            return new Tuple2<>(new Tuple2<>(fd.getDepartApId(), fd.getArrivalApId()), fd);
         });
+
+        
     }
 }
