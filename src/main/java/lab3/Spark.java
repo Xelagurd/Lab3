@@ -19,6 +19,6 @@ public class Spark {
             return new Tuple2<>(new Tuple2<>(fd.getDepartApId(), fd.getArrivalApId()), fd);
         });
 
-        
+        /*д. В качестве ключа для пары аэропортов используем класс Tuple2 */
     }
 }
