@@ -8,4 +8,11 @@ public class FlData implements Serializable {
     private int departApId;
     private int arrivalApId;
     
+    public int getDepartApId() {
+        return departApId;
+    }
+
+    public int getArrivalApId() {
+        return arrivalApId;
+    }
 }
