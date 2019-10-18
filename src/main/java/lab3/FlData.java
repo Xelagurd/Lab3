@@ -11,6 +11,10 @@ public class FlData implements Serializable {
     private boolean canceled;
     private double delay;
 
+    public FlData(String flData) throws NumberFormatException {
+        String[] splitData = flData.split(",");
+    }
+
     public int getDepartApId() {
         return departApId;
     }
