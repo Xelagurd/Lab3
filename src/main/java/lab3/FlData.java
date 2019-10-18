@@ -4,4 +4,8 @@ import java.io.Serializable;
 
 public class FlData implements Serializable {
 
+    /*г. Создаем Java объекты для хранения данных — простые объекты реализующие интерфейс Serializable */
+    private int departApId;
+    private int arrivalApId;
+    
 }
