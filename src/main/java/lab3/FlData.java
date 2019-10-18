@@ -11,6 +11,11 @@ public class FlData implements Serializable {
     private boolean canceled;
     private double delay;
 
+    private static final int ARRIVAL_INDEX = 14;
+    private static final int DEPART_INDEX = 11;
+    private static final int CANCELED_INDEX = 19;
+    private static final int DELAY_INDEX = 17;
+    
     public FlData(String flData) throws NumberFormatException {
         String[] splitData = flData.split(",");
     }
