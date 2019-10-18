@@ -27,6 +27,14 @@ public class Spark {
                         a.getDelayed(),
                         a.getDelay()
                 ),
+                (pair, a) -> pair.addFl(
+                        a.getCanceled(),
+                        a.getDelayed(),
+                        a.getDelay()
+                ),
+                AirportPair::add
         );
+
+
     }
 }
