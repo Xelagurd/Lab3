@@ -60,5 +60,7 @@ public class AirportPair implements Serializable {
 
     public String toString() {
         return "Max delay: " + Double.toString(this.maxDelay) +
+                " Percent of delayed flights: " + Double.toString(this.getDelPer()) +
+                " Percent of canceled flights: " + Double.toString(this.getCancPer());
     }
 }
